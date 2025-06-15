@@ -70,8 +70,15 @@ Attacker steals session	-- Yes
 Happens before login	-- No (after login)
 Prevention -- Use HTTPS, prevent XSS, secure cookies
 
+**#Cookie Flags / Cookie attributes
 
-
+Secure --	Ensures the cookie is only sent over HTTPS connections.
+HttpOnly --	Prevents JavaScript from accessing the cookie (helps prevent XSS attacks).
+SameSite --	Controls whether the cookie is sent with cross-site requests. Helps prevent CSRF. Values: Strict, Lax, None.
+Domain --	Specifies which domain(s) can access the cookie.
+Path --	Limits the cookie to a specific path within the domain.
+Expires / Max-Age --	Sets the cookie’s lifetime. Expires uses a date; Max-Age uses seconds.
+Name=Value --	The actual data stored in the cookie.
 
 
 

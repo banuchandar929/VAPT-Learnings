@@ -14,3 +14,15 @@ the things only we know no one else knows.
 -- atleast we need to maintain any of the above two mechanisms, so that the application will be secure.
 
 **"Breaking this authentication patterns are called BROKEN AUTHENTICATION."
+
+
+
+#Session: is like a temperory memory that a websites uses to remember who you are and what you are doing while you are using it.
+                                        (or)
+A sequence of http request and http response is associated for particular time and period for user.
+
+session will have validity time perion for how much time it should be active.
+session id will be sent from the server through "set-cookie".
+for client will send through "cookie".
+
+

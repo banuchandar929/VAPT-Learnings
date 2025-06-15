@@ -25,4 +25,58 @@ session will have validity time perion for how much time it should be active.
 session id will be sent from the server through "set-cookie".
 for client will send through "cookie".
 
+##Session Fixation
+What is it?
+Session Fixation is when an attacker sets or knows a user's session ID before login, and then tricks the user into authenticating with that session ID.
+
+Example:
+Attacker gets a valid session ID from the app (e.g., sessionid=ABC123).
+Sends a link to the victim: https://example.com?sessionid=ABC123
+Victim logs in using that session.
+Attacker now has access to the authenticated session.
+Prevention:
+Regenerate session ID after login.
+Use secure, unpredictable session tokens.
+Set session cookies with HttpOnly, Secure, and SameSite flags.
+
+
+#Session Hijacking
+What is it?
+Session Hijacking is when an attacker steals an active session ID and uses it to impersonate the user.
+
+--Example:
+Victim logs in and gets session ID XYZ789.
+Attacker intercepts this ID via:
+XSS
+Network sniffing (on unsecured HTTP)
+Malware
+Attacker uses XYZ789 to access the victim’s account.
+
+-- Prevention:
+Use HTTPS everywhere.
+Protect against XSS (which can leak cookies).
+Implement session timeout and IP/user-agent binding.
+Monitor for suspicious session activity.
+
+-- Session Fixation	
+Attacker sets session	-- Yes
+Attacker steals session	-- No	
+Happens before login	-- Yes	
+Prevention --	Regenerate session ID after login
+
+-- Session Hijacking
+Attacker sets session -- No
+Attacker steals session	-- Yes
+Happens before login	-- No (after login)
+Prevention -- Use HTTPS, prevent XSS, secure cookies
+
+
+
+
+
+
+
+
+
+
 

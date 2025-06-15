@@ -1,1 +1,16 @@
+#Authentication : is a process of verifying the identity of the user
+#Authorization: granting or denying access
 
+Authentication follows some mechanisms:
+
+-- something you know : what we know to authenticate to the website to tell the server.
+eg: username and password, security questions, pin
+the things only we know no one else knows.
+
+-- something you have : authenticating with what we have, "like we need to have physical devices" to get OTP, mobile device, cards, RSA token.
+
+-- something you are : authenticating with our fingerprints, eye scan, face recognition, walking patterns, voice recognision.
+
+-- atleast we need to maintain any of the above two mechanisms, so that the application will be secure.
+
+**"Breaking this authentication patterns are called BROKEN AUTHENTICATION."
